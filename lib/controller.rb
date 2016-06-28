@@ -55,10 +55,11 @@ class SlowFood < Sinatra::Base
 
   post '/auth/login' do
     env['warden'].authenticate!
-    flash[:success] = "Successfully logged in #{current_user.username}"
     if session[:return_to].nil?
+      flash[:success] = "Successfully logged in #{current_user.username}"
       redirect '/'
     else
+      flash[:error] = "Your username or password are incorrect"
       redirect session[:return_to]
     end
   end

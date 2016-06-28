@@ -4,6 +4,10 @@ Given(/^the following users exist$/) do |table|
   end
 end
 
+Then(/^show me the page$/) do
+  save_and_open_page
+end
+
 Given(/^I am on the home page$/) do
   visit '/'
 end
