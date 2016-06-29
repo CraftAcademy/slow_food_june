@@ -16,7 +16,7 @@ class SlowFood < Sinatra::Base
   register Sinatra::Warden
   set :session_secret, "supersecret"
 
-  #binding.pry
+
   #Create a test User
   if User.count == 0
    @user = User.create(username: "admin")
