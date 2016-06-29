@@ -18,11 +18,11 @@ class SlowFood < Sinatra::Base
 
   #binding.pry
   #Create a test User
-  if User.count == 0
-   @user = User.create(username: "admin")
-   @user.password = "admin"
-   @user.save
-  end
+  # if User.count == 0
+  #  @user = User.create(username: "admin")
+  #  @user.password = "admin"
+  #  @user.save
+  # end
 
   use Warden::Manager do |config|
     # Tell Warden how to save our User info into a session.

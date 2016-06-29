@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<body>
+<title>Sinatra Warden</title>
+
+<h1>User authentication</h1>
+
+<p>
+  
+
+    <a href="/auth/login">Log In</a>
+  
+
+  
+
+  
+    <div style="color:red;">
+      You must log in
+    </div>
+  
+
+  <form action="/auth/login" method="post">
+  <label for="username">Username</label>
+  <input type="text" id="username" name="user[:username]" />
+  <label for="password">Password</label>
+  <input type="password" id="password" name="user[:password]" />
+  <input type="submit" id="submit" value="Submit" />
+</form>
+
+  </body>
+</html>

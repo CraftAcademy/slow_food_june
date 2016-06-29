@@ -4,8 +4,8 @@ Feature: As a user
 
 Background:
   Given the following users exist
-    |username|password|
-    |admin   |admin   |
+    | username | password |
+    | admin    | admin    |
 
 Scenario: Access the login page
   Given I am on the home page
@@ -15,8 +15,9 @@ Scenario: Access the login page
 
 Scenario: Log in a user
   Given I am on the login page
-  And I fill in "username" with "admin"
-  And I fill in "password" with "admin"
-  And I click on "Log In"
+  And I fill in "Username" with "admin"
+  And I fill in "Password" with "admin"
+  And I click on "Submit"
+  Then show me the page
   Then I should see "Successfully logged in admin"
   And I should be on the home page
